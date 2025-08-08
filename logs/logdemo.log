@@ -1,0 +1,86 @@
+2025-08-08T12:18:44.719+05:30  WARN 3780 --- [logdemo] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2025-08-08T12:18:44.751+05:30  WARN 3780 --- [logdemo] [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
+2025-08-08T12:18:44.817+05:30 ERROR 3780 --- [logdemo] [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8080 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
+
+2025-08-08T12:20:54.968+05:30  WARN 1804 --- [logdemo] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2025-08-08T12:20:54.990+05:30  WARN 1804 --- [logdemo] [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
+2025-08-08T12:20:55.035+05:30 ERROR 1804 --- [logdemo] [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8081 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8081 or configure this application to listen on another port.
+
+2025-08-08T12:33:59.842+05:30  WARN 4112 --- [logdemo] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2025-08-08T12:33:59.877+05:30  WARN 4112 --- [logdemo] [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
+2025-08-08T12:33:59.977+05:30 ERROR 4112 --- [logdemo] [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8086 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8086 or configure this application to listen on another port.
+
+2025-08-08T12:39:18.730+05:30  INFO 19144 --- [logdemo] [restartedMain] com.example.logdemo.LogdemoApplication   : Starting LogdemoApplication using Java 17.0.9 with PID 19144 (C:\WiproTraining\logdemo\target\classes started by ashok in C:\WiproTraining\logdemo)
+2025-08-08T12:39:18.742+05:30  INFO 19144 --- [logdemo] [restartedMain] com.example.logdemo.LogdemoApplication   : No active profile set, falling back to 1 default profile: "default"
+2025-08-08T12:39:18.828+05:30  INFO 19144 --- [logdemo] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-08-08T12:39:18.828+05:30  INFO 19144 --- [logdemo] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-08-08T12:39:20.107+05:30  INFO 19144 --- [logdemo] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-08-08T12:39:20.118+05:30  INFO 19144 --- [logdemo] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-08-08T12:39:20.118+05:30  INFO 19144 --- [logdemo] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.43]
+2025-08-08T12:39:20.160+05:30  INFO 19144 --- [logdemo] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-08-08T12:39:20.161+05:30  INFO 19144 --- [logdemo] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1332 ms
+2025-08-08T12:39:20.605+05:30  INFO 19144 --- [logdemo] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-08-08T12:39:20.642+05:30  INFO 19144 --- [logdemo] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-08-08T12:39:20.652+05:30  INFO 19144 --- [logdemo] [restartedMain] com.example.logdemo.LogdemoApplication   : Started LogdemoApplication in 2.566 seconds (process running for 3.027)
+2025-08-08T12:42:46.082+05:30  INFO 19144 --- [logdemo] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-08-08T12:42:46.085+05:30  INFO 19144 --- [logdemo] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-08-08T12:42:46.087+05:30  INFO 19144 --- [logdemo] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-08-08T12:42:46.154+05:30 ERROR 19144 --- [logdemo] [http-nio-8080-exec-1] c.e.logdemo.controller.HomeController    : --Error--
+2025-08-08T12:42:46.155+05:30  WARN 19144 --- [logdemo] [http-nio-8080-exec-1] c.e.logdemo.controller.HomeController    : --WARN--
+2025-08-08T12:42:46.155+05:30  INFO 19144 --- [logdemo] [http-nio-8080-exec-1] c.e.logdemo.controller.HomeController    : --INFO--
+2025-08-08T14:06:17.202+05:30  INFO 19144 --- [logdemo] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2025-08-08T14:06:17.217+05:30  INFO 19144 --- [logdemo] [Thread-5] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-08-08T14:06:17.262+05:30  INFO 19144 --- [logdemo] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-08-08T14:06:17.358+05:30  INFO 19144 --- [logdemo] [restartedMain] com.example.logdemo.LogdemoApplication   : Starting LogdemoApplication using Java 17.0.9 with PID 19144 (C:\WiproTraining\logdemo\target\classes started by ashok in C:\WiproTraining\logdemo)
+2025-08-08T14:06:17.359+05:30  INFO 19144 --- [logdemo] [restartedMain] com.example.logdemo.LogdemoApplication   : No active profile set, falling back to 1 default profile: "default"
+2025-08-08T14:06:17.618+05:30  INFO 19144 --- [logdemo] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-08-08T14:06:17.620+05:30  INFO 19144 --- [logdemo] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-08-08T14:06:17.620+05:30  INFO 19144 --- [logdemo] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.43]
+2025-08-08T14:06:17.635+05:30  INFO 19144 --- [logdemo] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-08-08T14:06:17.636+05:30  INFO 19144 --- [logdemo] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 273 ms
+2025-08-08T14:06:17.742+05:30  INFO 19144 --- [logdemo] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-08-08T14:06:17.749+05:30  INFO 19144 --- [logdemo] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-08-08T14:06:17.752+05:30  INFO 19144 --- [logdemo] [restartedMain] com.example.logdemo.LogdemoApplication   : Started LogdemoApplication in 0.433 seconds (process running for 5220.127)
+2025-08-08T14:06:17.755+05:30  INFO 19144 --- [logdemo] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-08-08T14:06:45.051+05:30  INFO 19144 --- [logdemo] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-08-08T14:06:45.052+05:30  INFO 19144 --- [logdemo] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-08-08T14:06:45.052+05:30  INFO 19144 --- [logdemo] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2025-08-08T14:06:45.054+05:30 ERROR 19144 --- [logdemo] [http-nio-8080-exec-1] c.e.logdemo.controller.HomeController    : --Error--
+2025-08-08T14:06:45.054+05:30  WARN 19144 --- [logdemo] [http-nio-8080-exec-1] c.e.logdemo.controller.HomeController    : --WARN--
+2025-08-08T14:06:45.055+05:30  INFO 19144 --- [logdemo] [http-nio-8080-exec-1] c.e.logdemo.controller.HomeController    : --INFO--
