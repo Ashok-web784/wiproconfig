@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Character Countdown</title>
+</head>
+<body>
+    <h2>Character Countdown Example</h2>
+
+    
+    <input type="text" id="myInput" maxlength="50" placeholder="Type here" oninput="updateRemaining()">
+    
+    <p id="remaining">50 characters remaining</p>
+
+    <script>
+        function updateRemaining() {
+            
+            let maxLength = 50;
+
+            let currentLength = document.getElementById("myInput").value.length;
+
+           let remaining = maxLength - currentLength;
+
+            document.getElementById("remaining").innerHTML = remaining + " characters remaining";
+        }
+    </script>
+</body>
+</html>

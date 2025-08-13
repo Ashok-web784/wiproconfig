@@ -1,0 +1,70 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple Image Gallery</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        img {
+            width: 400px;
+            height: 250px;
+            border-radius: 10px;
+            border: 2px solid #ccc;
+        }
+        button {
+            padding: 10px 15px;
+            margin: 10px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Simple Image Gallery</h2>
+    <img id="galleryImage" src="" alt="Gallery Image">
+    <br>
+    <button onclick="prevImage()">Prev</button>
+    <button onclick="nextImage()">Next</button>
+
+    <script>
+        
+        let images = [
+            "https://images.unsplash.com/photo-1530281700549-e82e7bf110d6?auto=format&fit=crop&w=800&q=60",
+            "https://images.unsplash.com/photo-1515191107209-c28698631303?auto=format&fit=crop&w=800&q=60",
+            "https://images.unsplash.com/photo-1502741134006-0bb08c49119b?auto=format&fit=crop&w=800&q=60",
+            "https://images.unsplash.com/photo-1506806732259-39c2d0268443?auto=format&fit=crop&w=800&q=60"
+        ];
+
+        let currentIndex = 0;
+
+        function showImage(index) {
+            document.getElementById("galleryImage").src = images[index];
+        }
+
+        function nextImage() {
+            currentIndex++;
+            if (currentIndex >= images.length) {
+                currentIndex = 0;
+            }
+            showImage(currentIndex);
+        }
+
+        function prevImage() {
+            currentIndex--;
+            if (currentIndex < 0) {
+                currentIndex = images.length - 1;
+            }
+            showImage(currentIndex);
+        }
+
+        
+        showImage(currentIndex);
+    </script>
+
+</body>
+</html>

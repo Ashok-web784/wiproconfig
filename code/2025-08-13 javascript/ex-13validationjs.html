@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login Form Validation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 30px;
+        }
+        .error {
+            color: red;
+            font-size: 13px;
+            visibility: hidden; /* hidden by default */
+        }
+        input {
+            margin-bottom: 10px;
+            padding: 5px;
+            width: 250px;
+        }
+        button {
+            padding: 8px 15px;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Login Form</h2>
+
+<form onsubmit="return validateForm()">
+    <label>Email:</label><br>
+    <input type="text" id="email" onblur="handleEmailBlur()">
+    <span id="emailError" class="error">Email cannot be empty or invalid</span>
+    <br><br>
+
+    <label>Password:</label><br>
+    <input type="password" id="password" onblur="handlePasswordBlur()">
+    <span id="passwordError" class="error">Password cannot be empty</span>
+    <br><br>
+
+    <button type="submit">Login</button>
+</form>
+
+<script>
+function handleEmailBlur() {
+    let valueText = document.getElementById("email").value.trim();
+    let emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if (valueText === "" || !emailPattern.test(valueText)) {
+        document.getElementById("emailError").style.visibility = "visible";
+    } else {
+        document.getElementById("emailError").style.visibility = "hidden";
+    }
+}
+
+function handlePasswordBlur() {
+    let valueText = document.getElementById("password").value.trim();
+
+    if (valueText === "") {
+        document.getElementById("passwordError").style.visibility = "visible";
+    } else {
+        document.getElementById("passwordError").style.visibility = "hidden";
+    }
+}
+
+function validateForm() {
+    let emailValue = document.getElementById("email").value.trim();
+    let passwordValue = document.getElementById("password").value.trim();
+    let emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    let emailValid = emailValue !== "" && emailPattern.test(emailValue);
+    let passwordValid = passwordValue !== "";
+
+    // Show errors if invalid
+    document.getElementById("emailError").style.visibility = emailValid ? "hidden" : "visible";
+    document.getElementById("passwordError").style.visibility = passwordValid ? "hidden" : "visible";
+
+    return emailValid && passwordValid; // return false stops form submission
+}
+</script>
+
+</body>
+</html>

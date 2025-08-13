@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Eligible Voters</title>
+</head>
+<body>
+    <h2>List of Adult Voters</h2>
+    <div id="result"></div>
+
+    <script>
+        let persons = [
+            { name: "ashok", age: 24, city: "Andhrapradesh" },
+            { name: "vishnu", age: 23, city: "Hyderabad" },
+            { name: "Rahul", age: 17, city: "Hyderabad" },
+        ];
+
+        
+        persons.forEach(person => {
+            if (person.age >= 18) {
+                person.status = "Adult";
+            } else {
+                person.status = "Minor";
+            }
+        });
+
+         let adults = persons.filter(person => person.status === "Adult");
+
+         let resultText = adults.map(p => `${p.name} (${p.age}) - ${p.city}`).join("<br>");
+         document.getElementById("result").innerHTML = resultText;
+         
+         console.log(adults);
+    </script>
+</body>
+</html>
