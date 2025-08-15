@@ -1,28 +1,27 @@
 
-// Global scope variables
-var x = 4;        // Can be reassigned and accessed anywhere
-const z = 9;      // Constant, cannot be reassigned
+
+var x = 4;        
+const z = 9;     
 
 function f() {
-    // Changing global variable x
+    
     x = 9;
 
-    let y = 8;    // Block scoped variable (only inside function or block)
-
-    console.log("x inside function: " + x); // Accessible, modified value
-    console.log("y inside function: " + y); // Accessible here
+    let y = 8;    
+    console.log("x inside function: " + x); 
+    console.log("y inside function: " + y); 
 
     if (true) {
-        let z = 18; // This 'z' is different from the global z (block scoped)
-        console.log("y inside if block: " + y); // Accessible (function scope)
-        console.log("z inside if block: " + z); // This is local z
+        let z = 18; 
+        console.log("y inside if block: " + y); 
+        console.log("z inside if block: " + z); 
     }
 
-    console.log("z in function (global const): " + z); // Refers to global z = 9
+    console.log("z in function (global const): " + z); 
 }
 
-f(); // Function call
+f(); 
 
-console.log("x outside function: " + x); // Accessible (var is global)
-// console.log("y outside function: " + y); // ❌ ERROR: y is not accessible here
-console.log("z outside function: " + z); // Accessible (global const)
+console.log("x outside function: " + x); 
+
+console.log("z outside function: " + z); 
