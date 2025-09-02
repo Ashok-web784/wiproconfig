@@ -1,0 +1,154 @@
+<div class="success-page">
+  <div class="container">
+    
+    <!-- Success Header -->
+    <div class="success-header">
+      <div class="success-icon">
+        <div class="check-circle">✓</div>
+      </div>
+      <h2 class="success-title">Booking Confirmed!</h2>
+      <p class="success-message">
+        Your flight has been successfully booked. A confirmation email has been sent to your registered email address.
+      </p>
+    </div>
+
+    <!-- Booking Details -->
+    <div class="booking-details" *ngIf="booking && flight">
+      
+      <!-- Confirmation Info -->
+      <div class="confirmation-card">
+        <div class="card-header">
+          <h5>Booking Confirmation</h5>
+          <div class="booking-ref">
+            <span class="ref-label">Booking Reference</span>
+            <span class="ref-number">{{booking.id}}</span>
+          </div>
+        </div>
+        
+        <div class="card-content">
+          <div class="passenger-info">
+            <h6>Passenger Details</h6>
+            <div class="info-grid">
+              <div class="info-item">
+                <span class="label">Name</span>
+                <span class="value">{{booking.passengerName}}</span>
+              </div>
+              <div class="info-item">
+                <span class="label">Email</span>
+                <span class="value">{{booking.email}}</span>
+              </div>
+              <div class="info-item">
+                <span class="label">Phone</span>
+                <span class="value">{{booking.phone}}</span>
+              </div>
+              <div class="info-item">
+                <span class="label">Age</span>
+                <span class="value">{{booking.age}}</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Flight Details -->
+      <div class="flight-card">
+        <div class="card-header">
+          <h5>Flight Details</h5>
+          <div class="flight-status confirmed">Confirmed</div>
+        </div>
+        
+        <div class="card-content">
+          <div class="airline-section">
+            <div class="airline-logo">{{getAirlineInitials(flight.airline)}}</div>
+            <div class="airline-info">
+              <div class="airline-name">{{flight.airline}}</div>
+              <div class="flight-number">{{flight.flightNumber}}</div>
+              <div class="aircraft" *ngIf="flight.aircraft">{{flight.aircraft}}</div>
+            </div>
+          </div>
+
+          <div class="flight-route">
+            <div class="departure">
+              <div class="time">{{flight.departureTime}}</div>
+              <div class="location">{{flight.source}}</div>
+              <div class="date">{{getCurrentDate()}}</div>
+            </div>
+            
+            <div class="route-info">
+              <div class="duration">{{flight.duration}}</div>
+              <div class="route-line"></div>
+              <div class="stops">Non-stop</div>
+            </div>
+            
+            <div class="arrival">
+              <div class="time">{{flight.arrivalTime}}</div>
+              <div class="location">{{flight.destination}}</div>
+              <div class="date">{{getCurrentDate()}}</div>
+            </div>
+          </div>
+
+          <div class="flight-extras">
+            <div class="extra-item">
+              <span class="extra-icon">🧳</span>
+              <span>20kg Check-in Baggage</span>
+            </div>
+            <div class="extra-item">
+              <span class="extra-icon">🎒</span>
+              <span>7kg Cabin Baggage</span>
+            </div>
+            <div class="extra-item">
+              <span class="extra-icon">🍽️</span>
+              <span>Complimentary Meal</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Payment Summary -->
+      <div class="payment-card" *ngIf="payment">
+        <div class="card-header">
+          <h5>Payment Summary</h5>
+          <div class="payment-status paid">Paid</div>
+        </div>
+        
+        <div class="card-content">
+          <div class="payment-details">
+            <div class="payment-row">
+              <span>Flight Fare</span>
+              <span>₹{{booking.amount | number}}</span>
+            </div>
+            <div class="payment-total">
+              <span>Total Paid</span>
+              <span class="total-amount">₹{{booking.amount | number}}</span>
+            </div>
+          </div>
+          
+          <div class="transaction-info">
+            <div class="transaction-row">
+              <span>Transaction ID</span>
+              <span>{{payment.transactionId || 'TXN' }}</span>
+            </div>
+            <div class="transaction-row">
+              <span>Payment Method</span>
+              <span>Credit/Debit Card</span>
+            </div>
+            <div class="transaction-row">
+              <span>Payment Time</span>
+              <span>{{getCurrentDateTime()}}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Actions -->
+    <div class="action-section">
+      <button class="btn-download" (click)="downloadTicket()">
+        Download Ticket
+      </button>
+      <button class="btn-home" routerLink="/">
+        Book Another Flight
+      </button>
+    </div>
+  </div>
+</div>

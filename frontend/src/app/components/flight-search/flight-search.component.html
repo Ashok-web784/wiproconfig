@@ -1,0 +1,107 @@
+<!-- Hero Section with Background -->
+<div class="hero-section">
+  <div class="hero-content">
+    <div class="hero-text">
+      <h1 class="hero-title">
+        <span class="gradient-text">Find Your Perfect Flight</span>
+      </h1>
+      <p class="hero-subtitle">
+        🌍 Search thousands of flights worldwide • 💰 Best prices guaranteed • ⚡ Instant booking
+      </p>
+    </div>
+  </div>
+</div>
+
+<!-- Search Form -->
+<div class="search-container">
+  <div class="container">
+    <div class="search-card">
+      <div class="search-header">
+        <h3 class="search-title">
+          <span class="search-icon">🔍</span>
+          Search Flights
+        </h3>
+        <div class="trip-type">
+          <span class="trip-badge">✈️ One Way</span>
+        </div>
+      </div>
+
+      <form [formGroup]="form" (ngSubmit)="search()" class="search-form">
+        <div class="form-row">
+          <div class="form-group from-group">
+            <label class="form-label">
+              <span class="label-icon">🛫</span>
+              From
+            </label>
+            <div class="input-wrapper">
+              <input formControlName="source" 
+                     class="form-input" 
+                     placeholder="Enter departure city"/>
+              <div class="input-decoration"></div>
+            </div>
+          </div>
+
+          <div class="swap-button">
+            <button type="button" class="swap-btn" (click)="swapLocations()">
+              <span class="swap-icon">⇄</span>
+            </button>
+          </div>
+
+          <div class="form-group to-group">
+            <label class="form-label">
+              <span class="label-icon">🛬</span>
+              To
+            </label>
+            <div class="input-wrapper">
+              <input formControlName="destination" 
+                     class="form-input" 
+                     placeholder="Enter destination city"/>
+              <div class="input-decoration"></div>
+            </div>
+          </div>
+
+          <div class="form-group date-group">
+            <label class="form-label">
+              <span class="label-icon">📅</span>
+              Departure Date
+            </label>
+            <div class="input-wrapper">
+              <input type="date" 
+                     formControlName="date" 
+                     class="form-input date-input"/>
+              <div class="input-decoration"></div>
+            </div>
+          </div>
+
+          <div class="form-group search-group">
+            <button class="search-btn" 
+                    type="submit" 
+                    [disabled]="loading || form.invalid"
+                    [class.loading]="loading">
+              <span *ngIf="!loading" class="btn-content">
+                <span class="btn-icon">🚀</span>
+                <span class="btn-text">Search Flights</span>
+              </span>
+              <span *ngIf="loading" class="loading-content">
+                <span class="spinner"></span>
+                <span>Searching...</span>
+              </span>
+            </button>
+          </div>
+        </div>
+      </form>
+
+      <!-- Status Messages -->
+      <div class="status-messages">
+        <div *ngIf="error" class="alert error-alert">
+          <span class="alert-icon">⚠️</span>
+          <span>{{error}}</span>
+        </div>
+        <div *ngIf="noResults" class="alert warning-alert">
+          <span class="alert-icon">📭</span>
+          <span>No flights available for the selected route/date. Try different options.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
